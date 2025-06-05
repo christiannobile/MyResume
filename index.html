@@ -11,7 +11,7 @@
       background: #f3f3f3;
       margin: 0;
       padding: 2rem;
-      line-height: 1.4;
+      line-height: 1.3; /* Further reduced global line height */
     }
 
     .cv {
@@ -29,10 +29,10 @@
 
     h2 {
       font-size: 22px;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem; /* Reduced spacing below headings */
       border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
+      padding-bottom: 0.2rem;
     }
 
     .meta p {
@@ -42,40 +42,62 @@
     .grid-section {
       display: grid;
       grid-template-columns: 250px 1fr;
-      gap: 2rem;
-      margin-bottom: 2rem;
+      gap: 0.8rem; /* Reduced spacing between columns */
+      margin-bottom: 0.6rem; /* Consistent spacing between sections */
+      line-height: 1.3; /* Matches paragraph line height */
+    }
+
+    .grid-section .left,
+    .grid-section .right {
+      margin: 0; /* Remove extra margins */
+      line-height: 1.3; /* Matches paragraph line height */
     }
 
     .grid-section .left {
       font-weight: bold;
       white-space: pre-line;
+      text-align: left;
     }
 
     .grid-section .right h3 {
       font-size: 17px;
       margin: 0;
+      margin-bottom: 0.2rem; /* Slightly reduced spacing below the h3 */
+      line-height: 1; /* Further reduced line height for h3 */
     }
 
     .grid-section .right p {
-      margin: 0.2rem 0;
+      margin: 0.1rem 0;
+      line-height: 1.3; /* Keep consistent line height for paragraphs */
     }
 
-    .paragraph {
-      margin-bottom: 1rem;
+    .grid-section .right p.sub-role {
+      font-size: 15px; /* Slightly smaller than the main role */
+      font-style: italic; /* Make it cursive */
+      font-weight: 500; /* Medium weight for emphasis */
+      color: #333; /* Slightly darker color for better visibility */
+      margin: 0.3rem 0; /* Consistent spacing above and below */
+      line-height: 1.3; /* Matches paragraph line height */
+    }
+
+    .grid-section .paragraph {
+      margin-bottom: 0.6rem; /* Keep spacing for content paragraphs */
+      line-height: 1.3; /* Consistent line height */
     }
 
     .list-inline {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.4rem;
       padding: 0;
-      margin: 0.3rem 0;
+      margin: 0.6rem 0; /* Consistent spacing for skills section */
       list-style: none;
+      line-height: 1.3; /* Matches paragraph line height */
     }
 
     .list-inline li {
       background: #eee;
-      padding: 0.4rem 0.6rem;
+      padding: 0.3rem 0.5rem;
       border-radius: 4px;
       font-size: 14px;
     }
@@ -83,33 +105,6 @@
     a {
       color: #0073b1;
       text-decoration: none;
-    }
-
-    /* --- MODIFIED CERTIFICATIONS SECTION --- */
-
-    /* Target Certifications section grid-sections */
-    h2 + .grid-section,
-    h2 + .grid-section ~ .grid-section {
-      max-width: 600px;           /* narrower width for centering */
-      margin-left: auto;
-      margin-right: auto;
-      grid-template-columns: 180px 1fr; /* smaller left column */
-      gap: 1.5rem;
-    }
-
-    h2 + .grid-section .left,
-    h2 + .grid-section ~ .grid-section .left {
-      text-align: right;
-      font-weight: bold;
-      white-space: nowrap;       /* keep title and code on one line */
-      padding-right: 1rem;
-      float: none;               /* remove any float */
-      white-space: nowrap;
-    }
-
-    h2 + .grid-section .right,
-    h2 + .grid-section ~ .grid-section .right {
-      text-align: left;
     }
   </style>
 </head>
@@ -144,47 +139,50 @@
     <h2>Experience</h2>
 
     <div class="grid-section">
-      <div class="left">August 2024 – Present
-Brussels, Belgium</div>
+      <div class="left">August 2024 – Present<br>Brussels, Belgium</div>
       <div class="right">
         <h3>Belgian Mobile ID – Itsme</h3>
         <p><strong>Cloud & Systems Engineer</strong></p>
-        <div class="paragraph">Responsible for end-to-end backend API service integration. Created CI/CD pipelines for deploying to Kubernetes across multiple environments using Helm, GitHub Actions, and Terraform.</div>
-        <div class="paragraph">Integrated the backend with the Azure API service, covering mTLS, proxy configuration, policies, ingress, network policies, and versioning.</div>
-        <div class="paragraph">Created a custom Azure Key Vault certificate monitor: Migrated over 300 Azure Key Vaults across four environments to a Terraform module. Automated the deployment of a Kubernetes CronJob using Helm templates, Golang, Terraform, and Prometheus PushGateway Exporter. Configured Grafana alerts for TLS certificates approaching expiration.</div>
-        <div class="paragraph">Deployed and configured Istio service mesh and Kubernetes Gateway to manage internal and external traffic routing.</div>
-        <div class="paragraph">Contributed to supporting major backend releases.</div>
-        <div class="paragraph">Participated in 24/7 on-call.</div>
+        <div class="paragraph">Responsible for end-to-end backend API service integration</div>
+        <div class="paragraph">Created CI/CD pipelines for deploying to Kubernetes across multiple environments using Helm, GitHub Actions, and Terraform</div>
+        <div class="paragraph">Integrated the backend with the Azure API service, covering mTLS, proxy configuration, policies, ingress, network policies, and versioning</div>
+        <div class="paragraph">Created a custom Azure Key Vault certificate monitor: Migrated over 300 Azure Key Vaults across four environments to a Terraform module</div>
+        <div class="paragraph">Automated the deployment of a Kubernetes CronJob using Helm templates, Golang, Terraform, and Prometheus PushGateway Exporter</div>
+        <div class="paragraph">Configured Grafana alerts for TLS certificates approaching expiration</div>
+        <div class="paragraph">Deployed and configured Istio service mesh and Kubernetes Gateway to manage internal and external traffic routing</div>
+        <div class="paragraph">Contributed to supporting major backend releases</div>
+        <div class="paragraph">Participated in 24/7 on-call</div>
       </div>
     </div>
 
     <div class="grid-section">
-      <div class="left">September 2022 – August 2024
-Brussels, Belgium</div>
+      <div class="left">September 2022 – August 2024<br>Brussels, Belgium</div>
       <div class="right">
         <h3>Sitecore</h3>
         <p><strong>Cloud Infrastructure Engineer</strong></p>
-        <div class="paragraph">The platform engineering team is responsible for building complex cloud environments for Sitecore products. Our team uses its expertise in IaaC to create scalable infrastructure with high-availability. By leveraging CI/CD processes, we can rapidly deploy and efficiently manage cloud infrastructure.</div>
-        <div class="paragraph">Responsible for the deployment and maintenance of scalable and high-available cloud infrastructure using Terraform and Terraform cloud.</div>
-        <div class="paragraph">Automated multiple administrative processes for managing user lifecycle and access to internal Elastic Cloud and Terraform Cloud platforms.</div>
-        <div class="paragraph">Deployed a cronjob to Kubernetes written in bash and deployed with flux CD to enhance gitops processes.</div>
-        <div class="paragraph">Contributed to 24/7 on-call.</div>
-        <div class="paragraph">Scrum/Agile.</div>
+        <div class="paragraph">The platform engineering team is responsible for building complex cloud environments for Sitecore products</div>
+        <div class="paragraph">Our team uses its expertise in IaaC to create scalable infrastructure with high availability</div>
+        <div class="paragraph">By leveraging CI/CD processes, we can rapidly deploy and efficiently manage cloud infrastructure</div>
+        <div class="paragraph">Responsible for the deployment and maintenance of scalable and high-available cloud infrastructure using Terraform and Terraform cloud</div>
+        <div class="paragraph">Automated multiple administrative processes for managing user lifecycle and access to internal Elastic Cloud and Terraform Cloud platforms</div>
+        <div class="paragraph">Deployed a cronjob to Kubernetes written in bash and deployed with flux CD to enhance gitops processes</div>
+        <div class="paragraph">Contributed to 24/7 on-call</div>
+        <div class="paragraph">Scrum/Agile</div>
       </div>
     </div>
 
     <div class="grid-section">
-      <div class="left">June 2021 – August 2022
-Edegem, Belgium</div>
+      <div class="left">June 2021 – August 2022<br>Edegem, Belgium</div>
       <div class="right">
         <h3>Cheops Technology</h3>
-        <p><strong>System Administrator</strong> (Consultant at Belgian Federal Police)</p>
-        <div class="paragraph">Responsible for designing and implementing an automation that streamlined administrative processes for all federal and local police units in Belgium. This project improved efficiency and security by automating the lifecycle management of admins and user access.</div>
+        <p><strong>System Administrator</strong></p>
+        <p class="sub-role">Consultant at Belgian Federal Police</p>
+        <div class="paragraph">Responsible for designing and implementing an automation that streamlined administrative processes for all federal and local police units in Belgium</div>
         <div class="paragraph">Scripting, Powershell, MS Graph Powershell SDK, MS Graph API, GIT</div>
         <div class="paragraph">Implementing modern authentication methods, IdaaS</div>
-        <div class="paragraph">Azure Identity and Acces Management, Azure AD, RBAC, Conditional Access</div>
+        <div class="paragraph">Azure Identity and Access Management, Azure AD, RBAC, Conditional Access</div>
         <div class="paragraph">Enterprise application, SAML2, oAuth, OpenConnect-ID, Implementing SSO</div>
-        <div class="paragraph">Handled configuration, and management of Azure AD App Registrations and associated secrets</div>
+        <div class="paragraph">Handled configuration and management of Azure AD App Registrations and associated secrets</div>
         <div class="paragraph">Responsible for managing identities in Azure AD</div>
         <div class="paragraph">MS Endpoint Manager (Intune)</div>
         <div class="paragraph">3rd line level support</div>
@@ -192,87 +190,92 @@ Edegem, Belgium</div>
     </div>
 
     <div class="grid-section">
-      <div class="left">March 2021 – June 2021
-Zaventem, Belgium</div>
+      <div class="left">March 2021 – June 2021<br>Zaventem, Belgium</div>
       <div class="right">
         <h3>Devoteam</h3>
-        <p><strong>DevOps Engineer</strong> (Consultant Microsoft Cloud at Elia)</p>
-        <div class="paragraph">Deployed Azure Cloud infrastructure using ARM Templates, Terraform, and PowerShell.</div>
-        <div class="paragraph">Managed CI/CD pipelines with Azure DevOps for multiple projects.</div>
-        <div class="paragraph">Supported migration from on-premises to Azure cloud environment.</div>
-        <div class="paragraph">Automated infrastructure provisioning and configuration management.</div>
-      </div>
-    </div>
-
-    <h2>Education</h2>
-
-    <div class="grid-section">
-      <div class="left">2010 – 2013
-Ostend, Belgium</div>
-      <div class="right">
-        <h3>KU Leuven</h3>
-        <p><strong>Bachelor’s Degree in Informatics</strong></p>
+        <p><strong>DevOps Engineer</strong></p>
+        <p class="sub-role">Consultant Microsoft Cloud at Elia</p>
+        <div class="paragraph">Deployed cloud infrastructure to Azure using Terraform (Infrastructure as Code)</div>
+        <div class="paragraph">Created CI/CD pipelines in Azure DevOps to deploy cloud infrastructure across multiple environments</div>
+        <div class="paragraph">Azure AD, RBAC, IAM, IaaS, IdaaS</div>
       </div>
     </div>
 
     <div class="grid-section">
-      <div class="left">2008 – 2010
-Ostend, Belgium</div>
+      <div class="left">May 2019 – March 2021<br>Merelbeke, Belgium</div>
       <div class="right">
-        <h3>GO! Technisch Instituut</h3>
-        <p><strong>Secondary Technical Education</strong></p>
+        <h3>Avanade</h3>
+        <p><strong>Senior Associate, Infrastructure</strong> <span style="font-style: italic;">– from May 2019 to November 2020</span></p>
+        <p class="sub-role">SysAdmin at Astara</p>
+        <div class="paragraph">Admin of Windows Server infrastructure and VMware Server, Active Directory, Group Policies, DNS, DHCP, Print Management, File Share, AD-Sync, AD-Connect, SCCM, O365, Exchange Online, products, licensing, mailboxes, security & compliance, domains</div>
+        <div class="paragraph">Management of external DNS and purchase of SSL certificates</div>
+        <div class="paragraph">Incident and request resolution</div>
+        <div class="paragraph">Responsible for onboarding and providing all required access</div>
+        <div class="paragraph">Purchase, asset management, hardware repairs</div>
+        <div class="paragraph">Telephony systems management VOIP, DECT, Analog</div>
+        <div class="paragraph">Maintain switches and telephony cabling</div>
+        <div class="paragraph">Communication and coordination with 3rd parties</div>
+        <div class="paragraph">Documenting the various IT processes</div>
+        <div class="paragraph">Application support</div>
+      </div>
+    </div>
+
+    <div class="grid-section">
+      <div class="left">November 2020 – March 2021<br>Merelbeke, Belgium</div>
+      <div class="right">
+        <h3>Avanade</h3>
+        <p><strong>Analyst, Infrastructure</strong> <span style="font-style: italic;">– from November 2020 to March 2021</span></p>
+        <p class="sub-role">SysAdmin at Europe Assistance</p>
+        <div class="paragraph">Security Assessment of risks in Windows Active Directory (Service/Admin accounts, Schema, Groups, Group Policies, Services, Sites, Trusts,...)</div>
+        <div class="paragraph">Responsible for PoC and planned rollout of LAPS on Windows Server Infrastructure (VM, vSphere, Azure, on-premises) and clients</div>
+        <div class="paragraph">Configuring service & resource health alerts</div>
+        <div class="paragraph">Rollout of Microsoft ATP for Endpoint on Linux and Windows Server</div>
+        <div class="paragraph">Creating Update Management Groups for Linux and Windows Servers on Azure</div>
+        <div class="paragraph">Windows Server patching</div>
+        <div class="paragraph">Decommissioning VMs, inactive servers, cleanup of deprecated resources</div>
+        <div class="paragraph">Documenting the IT Infrastructure: Servers, Azure, Appliance (Firewall/VPN)</div>
+      </div>
+    </div>
+
+    <h2>Training</h2>
+    <div class="grid-section">
+      <div class="left">October 2018 – May 2019<br>Genk, Belgium</div>
+      <div class="right">
+        <h3>Becode.org</h3>
+        <p><strong>Web Developer</strong></p>
+        <div class="paragraph">Completed an intensive 8-month training program in web development, covering technologies such as HTML, CSS, SCSS, JavaScript, Bootstrap, Ajax, jQuery, PHP, MySQL, Apache, Docker, Git, and Linux</div>
       </div>
     </div>
 
     <h2>Certifications</h2>
+<div class="grid-section">
+  <div class="left">Azure Solutions Architect Expert</div>
+  <div class="right">Passed exam: AZ-305: Designing Microsoft Azure Infrastructure Solutions</div>
+</div>
+<div class="grid-section">
+  <div class="left">DevOps Engineer Expert</div>
+  <div class="right">Passed exam: AZ-400: Designing and Implementing Microsoft DevOps Solutions</div>
+</div>
+<div class="grid-section">
+  <div class="left">Azure Administrator Associate</div>
+  <div class="right">Passed exam: AZ-103: Microsoft Azure Administrator Associate</div>
+</div>
+<div class="grid-section">
+  <div class="left">CISSP</div>
+  <div class="right">Completed course: Certified Information Systems Security Professional</div>
+</div>
+<div class="grid-section">
+  <div class="left">CCNA</div>
+  <div class="right">Completed course: Introduction to Networks</div>
+</div>
 
-    <div class="grid-section">
-      <div class="left">AZ-900
-Microsoft Certified: Azure Fundamentals</div>
-      <div class="right">Microsoft</div>
-    </div>
-
-    <div class="grid-section">
-      <div class="left">AZ-104
-Microsoft Certified: Azure Administrator Associate</div>
-      <div class="right">Microsoft</div>
-    </div>
-
-    <div class="grid-section">
-      <div class="left">AZ-204
-Microsoft Certified: Azure Developer Associate</div>
-      <div class="right">Microsoft</div>
-    </div>
-
-    <div class="grid-section">
-      <div class="left">AZ-500
-Microsoft Certified: Azure Security Engineer Associate</div>
-      <div class="right">Microsoft</div>
-    </div>
-
-    <div class="grid-section">
-      <div class="left">ITIL® Foundation</div>
-      <div class="right">Axelos</div>
-    </div>
-
-    <div class="grid-section">
-      <div class="left">AWS Certified Cloud Practitioner</div>
-      <div class="right">Amazon Web Services (AWS)</div>
-    </div>
-
-    <h2>Skills</h2>
-
+<h2>Skills</h2>
     <ul class="list-inline">
-      <li>Cloud (Azure, AWS)</li>
-      <li>Terraform</li>
-      <li>Git/GitHub</li>
-      <li>Kubernetes</li>
-      <li>CI/CD</li>
-      <li>Bash, PowerShell</li>
-      <li>Docker</li>
-      <li>Prometheus / Grafana</li>
+      <li>Automation</li><li>Scripting</li><li>Linux</li><li>Terraform</li><li>Bash</li><li>Golang</li><li>Python</li>
+      <li>Helm</li><li>CI/CD</li><li>GitHub Actions</li><li>Makefile</li><li>Kustomize</li><li>FluxCD</li>
+      <li>Docker</li><li>Kubernetes</li><li>Prometheus</li><li>Grafana</li><li>Istio</li><li>Azure</li>
+      <li>SQL</li><li>Ansible</li><li>Redis</li><li>Kafka</li><li>ELK stack</li><li>Scrum/agile</li>
     </ul>
-
   </div>
 </body>
 </html>
