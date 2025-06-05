@@ -84,6 +84,33 @@
       color: #0073b1;
       text-decoration: none;
     }
+
+    /* --- MODIFIED CERTIFICATIONS SECTION --- */
+
+    /* Target Certifications section grid-sections */
+    h2 + .grid-section,
+    h2 + .grid-section ~ .grid-section {
+      max-width: 600px;           /* narrower width for centering */
+      margin-left: auto;
+      margin-right: auto;
+      grid-template-columns: 180px 1fr; /* smaller left column */
+      gap: 1.5rem;
+    }
+
+    h2 + .grid-section .left,
+    h2 + .grid-section ~ .grid-section .left {
+      text-align: right;
+      font-weight: bold;
+      white-space: nowrap;       /* keep title and code on one line */
+      padding-right: 1rem;
+      float: none;               /* remove any float */
+      white-space: nowrap;
+    }
+
+    h2 + .grid-section .right,
+    h2 + .grid-section ~ .grid-section .right {
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -170,81 +197,82 @@ Zaventem, Belgium</div>
       <div class="right">
         <h3>Devoteam</h3>
         <p><strong>DevOps Engineer</strong> (Consultant Microsoft Cloud at Elia)</p>
-        <div class="paragraph">Deployed cloud infrastructure to Azure using Terraform(Infrastructure as Code)</div>
-        <div class="paragraph">Created CI/CD pipelines in Azure Devops to deploy cloud infrastructure across multiple environments</div>
-        <div class="paragraph">Azure AD, RBAC, IAM, IaaS, IdaaS</div>
+        <div class="paragraph">Deployed Azure Cloud infrastructure using ARM Templates, Terraform, and PowerShell.</div>
+        <div class="paragraph">Managed CI/CD pipelines with Azure DevOps for multiple projects.</div>
+        <div class="paragraph">Supported migration from on-premises to Azure cloud environment.</div>
+        <div class="paragraph">Automated infrastructure provisioning and configuration management.</div>
+      </div>
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="grid-section">
+      <div class="left">2010 – 2013
+Ostend, Belgium</div>
+      <div class="right">
+        <h3>KU Leuven</h3>
+        <p><strong>Bachelor’s Degree in Informatics</strong></p>
       </div>
     </div>
 
     <div class="grid-section">
-  <div class="left">May 2019 – March 2021
-Merelbeke, Belgium</div>
-  <div class="right">
-    <h3>Avanade</h3>
-    <p><strong>Senior Associate, Infrastructure</strong> (SysAdmin at Astara)</p>
-    <p><em>May 2019 – November 2020</em></p>
-    <div class="paragraph">Admin of Windows Server infrastructure and VMware Server, Active Directory, Group Policies, DNS, DHCP, Print Management, File Share, AD-Sync, AD-Connect, SCCM, O365, Exchange Online, products, licensing, mailboxes, security & compliance, domains,...</div>
-    <div class="paragraph">Management of external DNS and purchase of SSL certificates.</div>
-    <div class="paragraph">Incident and request resolution.</div>
-    <div class="paragraph">Responsible for onboarding and providing all required access.</div>
-    <div class="paragraph">Purchase, asset management, hardware repairs.</div>
-    <div class="paragraph">Telephony systems management VOIP, DECT, Analog.</div>
-    <div class="paragraph">Maintain switches and telephony cabling.</div>
-    <div class="paragraph">Communication and coordination with 3rd parties.</div>
-    <div class="paragraph">Documenting the various IT processes.</div>
-    <div class="paragraph">Application support.</div>
-    <div class="paragraph">Training.</div>
-    <p><strong>Analyst, Infrastructure</strong> (SysAdmin at Europe Assistance)</p>
-    <p><em>November 2020 – March 2021</em></p>
-    <div class="paragraph">Security Assessment of risks in Windows Active Directory (Service/Admin accounts, Schema, Groups, Group Policies, Services, Sites, Trusts,...).</div>
-    <div class="paragraph">Responsible for PoC and planned rollout of LAPS on Windows Server Infrastructure (VM, vSphere, Azure, on-premises) and clients.</div>
-    <div class="paragraph">Configuring service & resource health alerts.</div>
-    <div class="paragraph">Rollout of Microsoft ATP for Endpoint on Linux and Windows Server.</div>
-    <div class="paragraph">Creating Update Management Groups for Linux and Windows Servers on Azure.</div>
-    <div class="paragraph">Windows Server patching.</div>
-    <div class="paragraph">Decommissioning VMs, inactive servers, cleanup of deprecated resources.</div>
-    <div class="paragraph">Documenting the IT Infrastructure: Servers, Azure, Appliance (Firewall/VPN).</div>
-  </div>
-</div>
-
-    <div class="grid-section">
-      <div class="left">October 2018 – May 2019
-Genk, Belgium</div>
+      <div class="left">2008 – 2010
+Ostend, Belgium</div>
       <div class="right">
-        <h3>Becode.org</h3>
-        <p><strong>Web Developer</strong></p>
-        <div class="paragraph">Completed an intensive 8-month training program in web development, covering technologies such as HTML, CSS, SCSS, JavaScript, Bootstrap, Ajax, jQuery, PHP, MySQL, Apache, Docker, Git, and Linux.</div>
+        <h3>GO! Technisch Instituut</h3>
+        <p><strong>Secondary Technical Education</strong></p>
       </div>
     </div>
 
     <h2>Certifications</h2>
-<div class="grid-section">
-  <div class="left">AZ-305</div>
-  <div class="right">Azure Solutions Architect Expert – Passed exam: Designing Microsoft Azure Infrastructure Solutions</div>
-</div>
-<div class="grid-section">
-  <div class="left">AZ-400</div>
-  <div class="right">DevOps Engineer Expert – Passed exam: Designing and Implementing Microsoft DevOps Solutions</div>
-</div>
-<div class="grid-section">
-  <div class="left">AZ-103</div>
-  <div class="right">Azure Administrator Associate – Passed exam: Microsoft Azure Administrator Associate</div>
-</div>
-<div class="grid-section">
-  <div class="left">CISSP</div>
-  <div class="right">Completed course: Certified Information Systems Security Professional</div>
-</div>
-<div class="grid-section">
-  <div class="left">CCNA</div>
-  <div class="right">Completed course: Introductions to Networks</div>
-</div>
-<h2>Skills</h2>
+
+    <div class="grid-section">
+      <div class="left">AZ-900
+Microsoft Certified: Azure Fundamentals</div>
+      <div class="right">Microsoft</div>
+    </div>
+
+    <div class="grid-section">
+      <div class="left">AZ-104
+Microsoft Certified: Azure Administrator Associate</div>
+      <div class="right">Microsoft</div>
+    </div>
+
+    <div class="grid-section">
+      <div class="left">AZ-204
+Microsoft Certified: Azure Developer Associate</div>
+      <div class="right">Microsoft</div>
+    </div>
+
+    <div class="grid-section">
+      <div class="left">AZ-500
+Microsoft Certified: Azure Security Engineer Associate</div>
+      <div class="right">Microsoft</div>
+    </div>
+
+    <div class="grid-section">
+      <div class="left">ITIL® Foundation</div>
+      <div class="right">Axelos</div>
+    </div>
+
+    <div class="grid-section">
+      <div class="left">AWS Certified Cloud Practitioner</div>
+      <div class="right">Amazon Web Services (AWS)</div>
+    </div>
+
+    <h2>Skills</h2>
+
     <ul class="list-inline">
-      <li>Automation</li><li>Scripting</li><li>Linux</li><li>Terraform</li><li>Bash</li><li>Golang</li><li>Python</li>
-      <li>Helm</li><li>CI/CD</li><li>GitHub Actions</li><li>Makefile</li><li>Kustomize</li><li>FluxCD</li>
-      <li>Docker</li><li>Kubernetes</li><li>Prometheus</li><li>Grafana</li><li>Istio</li><li>Azure</li>
-      <li>SQL</li><li>Ansible</li><li>Redis</li><li>Kafka</li><li>ELK stack</li><li>Scrum/agile</li>
+      <li>Cloud (Azure, AWS)</li>
+      <li>Terraform</li>
+      <li>Git/GitHub</li>
+      <li>Kubernetes</li>
+      <li>CI/CD</li>
+      <li>Bash, PowerShell</li>
+      <li>Docker</li>
+      <li>Prometheus / Grafana</li>
     </ul>
+
   </div>
 </body>
 </html>
