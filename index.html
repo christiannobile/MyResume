@@ -15,22 +15,40 @@
 
     .cv {
       background: white;
-      max-width: 900px;
+      max-width: 920px;
       margin: auto;
-      padding: 2rem;
+      padding: 2rem 3rem;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
 
-    h1, h2 {
-      margin-top: 0;
+    h1 {
+      margin-bottom: 0.2rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .meta-grid p {
+      margin: 0.3rem 0;
+    }
+
+    .contact a {
+      color: #0073b1;
+      text-decoration: none;
     }
 
     .section {
       margin-top: 2rem;
-    }
-
-    .contact p, .meta p {
-      margin: 0.2rem 0;
     }
 
     .job {
@@ -49,20 +67,6 @@
       padding-left: 1.2rem;
     }
 
-    .buttons a {
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      margin-right: 1rem;
-      background: #0073b1;
-      color: white;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-
-    .buttons a.email {
-      background: #333;
-    }
-
     .skills, .lang, .hobbies {
       display: flex;
       flex-wrap: wrap;
@@ -78,14 +82,8 @@
       border-radius: 3px;
     }
 
-    .meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
     @media (max-width: 700px) {
-      .meta {
+      .meta-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -94,16 +92,18 @@
 <body>
   <div class="cv">
     <h1>Christian Nobile</h1>
-    <div class="meta">
+    <p><strong>Cloud Infrastructure Engineer</strong></p>
+
+    <div class="meta-grid">
       <div>
         <p><strong>Date of birth:</strong> 29th of June 1992</p>
         <p><strong>Nationality:</strong> Belgian</p>
         <p><strong>Address:</strong> Chaussée de Gand 340, box 50</p>
         <p><strong>Phone:</strong> +32 (0)479 71 34 90</p>
       </div>
-      <div>
-        <p><strong>Email:</strong> christian.pietropaulo.nobile@gmail.com</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/christiannobile" target="_blank">christiannobile</a></p>
+      <div class="contact">
+        <p><strong>Email:</strong> <a href="mailto:christian.pietropaulo.nobile@gmail.com">christian.pietropaulo.nobile@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/christiannobile" target="_blank">linkedin.com/in/christiannobile</a></p>
         <p><strong>Languages:</strong></p>
         <ul class="lang">
           <li>English</li>
@@ -121,17 +121,12 @@
       </div>
     </div>
 
-    <div class="buttons" style="margin-top: 1rem;">
-      <a href="mailto:christian.pietropaulo.nobile@gmail.com" class="email">Email Me</a>
-      <a href="https://www.linkedin.com/in/christiannobile" target="_blank">LinkedIn</a>
-    </div>
-
     <div class="section">
       <h2>Profile</h2>
       <p>
-        Christian is a seasoned Cloud Infrastructure Engineer, possessing a comprehensive understanding of IT infrastructure. 
-        He demonstrates exceptional analytical skills, consistently delivering high-quality work within established deadlines, and prioritizes customer satisfaction. 
-        Christian exhibits a sharp ability to adapt and problem-solve in challenging situations, showcasing his unwavering commitment to learning and passion for IT infrastructure and Cloud technologies, 
+        Christian is a seasoned Cloud Infrastructure Engineer, possessing a comprehensive understanding of IT infrastructure.
+        He demonstrates exceptional analytical skills, consistently delivering high-quality work within established deadlines, and prioritizes customer satisfaction.
+        Christian exhibits a sharp ability to adapt and problem-solve in challenging situations, showcasing his unwavering commitment to learning and passion for IT infrastructure and Cloud technologies,
         setting him apart as a dedicated professional.
       </p>
     </div>
@@ -143,11 +138,11 @@
         <h3>Cloud & Systems Engineer – Belgian Mobile ID – Itsme</h3>
         <p><em>August 2024 – Present, Brussels, Belgium</em></p>
         <ul>
-          <li>Created CI/CD pipelines with Helm, GitHub Actions, and Terraform for Kubernetes deployments.</li>
-          <li>Integrated backend with Azure API Management: mTLS, proxy, policies, ingress, and versioning.</li>
-          <li>Developed custom Azure Key Vault cert monitor for 300+ vaults across 4 environments using Terraform, Helm, Golang, and Prometheus.</li>
-          <li>Configured Grafana alerts for TLS expiry, used Kubernetes CronJobs and PushGateway Exporter.</li>
-          <li>Deployed Istio mesh and Kubernetes Gateway for traffic routing.</li>
+          <li>CI/CD pipelines with Helm, GitHub Actions, Terraform for Kubernetes.</li>
+          <li>Azure API Management integration: mTLS, proxy config, policies, ingress, versioning.</li>
+          <li>Custom Azure Key Vault cert monitor for 300+ vaults using Terraform, Helm, Golang, Prometheus.</li>
+          <li>Kubernetes CronJobs with Prometheus PushGateway + Grafana TLS alerts.</li>
+          <li>Istio & Kubernetes Gateway for routing internal/external traffic.</li>
           <li>Supported backend releases and participated in 24/7 on-call.</li>
         </ul>
       </div>
@@ -156,38 +151,52 @@
         <h3>Cloud Infrastructure Engineer – Sitecore</h3>
         <p><em>September 2022 – August 2024, Brussels, Belgium</em></p>
         <ul>
-          <li>Built scalable and highly-available cloud infra with Terraform & Terraform Cloud.</li>
-          <li>Automated internal access management for Elastic Cloud and Terraform Cloud platforms.</li>
-          <li>Used bash + FluxCD to deploy Kubernetes cronjobs enhancing GitOps processes.</li>
-          <li>Contributed to 24/7 on-call support.</li>
+          <li>Terraform & Terraform Cloud for HA cloud infra.</li>
+          <li>Automated user lifecycle for Elastic Cloud & Terraform Cloud.</li>
+          <li>FluxCD-deployed bash CronJobs to support GitOps.</li>
+          <li>Scrum/Agile, 24/7 on-call support.</li>
         </ul>
       </div>
 
       <div class="job">
-        <h3>System Administrator – Cheops Technology (Consultant at Belgian Federal Police)</h3>
+        <h3>System Administrator – Cheops Technology (Belgian Federal Police)</h3>
         <p><em>June 2021 – August 2022, Edegem, Belgium</em></p>
         <ul>
-          <li>Designed automation for lifecycle management of admins/users for police units.</li>
-          <li>Used Powershell, Graph API/SDK, Azure AD, Conditional Access, IAM, SAML2, oAuth, OpenConnect-ID, SSO, and Intune.</li>
-          <li>Handled 3rd-line support and identity management.</li>
+          <li>Automated lifecycle for police admin/user access across Belgium.</li>
+          <li>PowerShell, MS Graph SDK/API, Azure Identity, RBAC, Conditional Access.</li>
+          <li>SSO, oAuth, SAML2, OpenConnect-ID, Intune, Azure AD App management.</li>
+          <li>3rd line support and modern auth methods with IdaaS.</li>
         </ul>
       </div>
 
       <div class="job">
-        <h3>DevOps Engineer – Devoteam (Consultant at Elia)</h3>
+        <h3>DevOps Engineer – Devoteam (Elia)</h3>
         <p><em>March 2021 – June 2021, Zaventem, Belgium</em></p>
         <ul>
-          <li>Deployed infrastructure to Azure via Terraform and CI/CD pipelines in Azure DevOps.</li>
+          <li>Terraform-based IaaC for Azure.</li>
+          <li>Azure DevOps CI/CD pipelines for environment rollout.</li>
         </ul>
       </div>
 
       <div class="job">
-        <h3>Analyst/Senior Associate Infrastructure – Avanade</h3>
-        <p><em>May 2019 – March 2021, Merelbeke, Belgium</em></p>
+        <h3>Analyst, Infrastructure – Avanade</h3>
+        <p><em>November 2020 – March 2021, Merelbeke, Belgium</em></p>
         <ul>
-          <li>Security assessments, rollout of LAPS, ATP for Endpoint, Update Management on Azure.</li>
-          <li>Documentation and cleanup of deprecated infra, patching, and rollout.</li>
-          <li>Administered Windows Server, AD, GPOs, DNS, DHCP, O365, Exchange Online, telephony, SSL certs, onboarding, and hardware management.</li>
+          <li>SysAdmin at Europe Assistance: risk assessment in Windows AD.</li>
+          <li>Rolled out LAPS, ATP for Endpoint (Linux/Windows), Update Mgmt on Azure.</li>
+          <li>Decommissioned VMs, resource cleanup, patching.</li>
+          <li>IT infra documentation incl. Servers, Azure, VPN/Firewall appliances.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Senior Associate, Infrastructure – Avanade</h3>
+        <p><em>May 2019 – November 2020, Merelbeke, Belgium</em></p>
+        <ul>
+          <li>SysAdmin at Astara: Windows Server, VMware, AD, GPOs, SCCM, O365.</li>
+          <li>External DNS management, SSL certs, onboarding/offboarding.</li>
+          <li>Telephony (VOIP, DECT), incident/request mgmt, 3rd-party coordination.</li>
+          <li>Asset mgmt, hardware repairs, and application support.</li>
         </ul>
       </div>
 
@@ -195,7 +204,7 @@
         <h3>Web Developer – Becode.org</h3>
         <p><em>October 2018 – May 2019, Genk, Belgium</em></p>
         <ul>
-          <li>Completed intensive training covering HTML, CSS, JS, PHP, MySQL, Docker, Git, Linux, Apache.</li>
+          <li>8-month training: HTML, CSS, SCSS, JS, PHP, MySQL, Bootstrap, Ajax, jQuery, Docker, Git, Linux.</li>
         </ul>
       </div>
     </div>
@@ -203,11 +212,11 @@
     <div class="section">
       <h2>Certifications</h2>
       <ul>
-        <li>Azure Solutions Architect Expert (AZ-305)</li>
-        <li>DevOps Engineer Expert (AZ-400)</li>
-        <li>Azure Administrator Associate (AZ-103)</li>
-        <li>CISSP – Completed course</li>
-        <li>CCNA – Completed course</li>
+        <li>Azure Solutions Architect Expert – AZ-305</li>
+        <li>DevOps Engineer Expert – AZ-400</li>
+        <li>Azure Administrator Associate – AZ-103</li>
+        <li>CISSP – course completed</li>
+        <li>CCNA – course completed</li>
       </ul>
     </div>
 
