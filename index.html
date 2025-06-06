@@ -6,323 +6,176 @@
   <title>Christian Nobile - CV</title>
   <style>
     body {
-      font-family: "Calibri", sans-serif;
-      font-size: 16px;
-      background: #f3f3f3;
-      margin: 0;
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
       padding: 2rem;
-      line-height: 1.3;
-    }
-
-    .cv {
-      background: #fff;
-      max-width: 1000px;
-      margin: auto;
-      padding: 3rem 4rem;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 0.2rem;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.2rem;
-    }
-
-    .meta p {
-      margin: 0.2rem 0;
-    }
-
-    .grid-section {
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      gap: 0.8rem;
-      margin-bottom: 0.6rem;
-      line-height: 1.3;
-    }
-
-    .grid-section .left,
-    .grid-section .right {
-      margin: 0;
-      line-height: 1.3;
-    }
-
-    .grid-section .left {
-      font-weight: bold;
-      white-space: pre-line;
-      text-align: left;
-    }
-
-    .grid-section .right h3 {
-      font-size: 17px;
-      margin: 0;
-      margin-bottom: 0.2rem;
-      line-height: 1;
-    }
-
-    .grid-section .right p {
-      margin: 0.1rem 0;
-      line-height: 1.3;
-    }
-
-    .grid-section .right p.sub-role {
-      font-size: 15px;
-      font-style: italic;
-      font-weight: 500;
+      max-width: 900px;
       color: #333;
-      margin: 0.3rem 0;
-      line-height: 1.3;
     }
-
-    .grid-section .paragraph {
-      margin-bottom: 0.6rem;
-      line-height: 1.3;
+    h1, h2, h3 {
+      margin-bottom: 0;
     }
-
-    .list-inline {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      padding: 0;
-      margin: 0.6rem 0;
-      list-style: none;
-      line-height: 1.3;
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
     }
-
-    .list-inline li {
-      background: #eee;
-      padding: 0.3rem 0.5rem;
-      border-radius: 4px;
-      font-size: 14px;
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      border-bottom: 1px solid #aaa;
     }
-
+    p, ul {
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .contact {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .experience-entry {
+      margin-bottom: 1.5rem;
+    }
+    .job-title {
+      font-weight: bold;
+    }
+    .location {
+      font-style: italic;
+      color: #555;
+    }
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .keywords {
+      display: inline-block;
+      background-color: #eee;
+      border-radius: 3px;
+      padding: 0.2rem 0.5rem;
+      margin: 0.1rem;
+      font-size: 0.85rem;
+    }
     a {
-      color: #0073b1;
+      color: #0366d6;
       text-decoration: none;
     }
-
-    /* Responsive Design for Mobile Screens */
-    @media (max-width: 768px) {
-      body {
-        padding: 1rem;
-      }
-
-      .cv {
-        padding: 2rem;
-      }
-
-      .grid-section {
-        display: block; /* Stack elements vertically */
-        margin-bottom: 1rem;
-      }
-
-      .grid-section .left {
-        font-size: 14px;
-        margin-bottom: 0.5rem; /* Add spacing below the date/location */
-      }
-
-      .grid-section .right h3 {
-        font-size: 16px;
-      }
-
-      .grid-section .right p {
-        font-size: 14px;
-      }
-
-      .list-inline {
-        flex-direction: column; /* Stack items vertically */
-        gap: 0.2rem;
-      }
-
-      .list-inline li {
-        font-size: 13px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="cv">
-    <h1>Christian Nobile</h1>
-    <div class="meta">
-      <p><strong>Date of birth:</strong> 29th of June 1992</p>
-      <p><strong>Nationality:</strong> Belgian</p>
-      <p><strong>Address:</strong> Chaussée de Gand 340, box 50</p>
-      <p><strong>Mobile phone:</strong> +32 (0)479 71 34 90</p>
-      <p><strong>Email:</strong> <a href="mailto:christian.pietropaulo.nobile@gmail.com">christian.pietropaulo.nobile@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/christiannobile" target="_blank">https://www.linkedin.com/in/christiannobile</a></p>
-      <p><strong>Website:</strong> <a href="https://christiannobile.github.io/MyResume/" target="_blank">https://christiannobile.github.io/MyResume/</a></p>
-      <p><strong>Languages:</strong></p>
-      <ul class="list-inline">
-        <li>English</li><li>Dutch</li><li>French</li><li>Italian</li>
-      </ul>
-      <p><strong>Hobbies:</strong></p>
-      <ul class="list-inline">
-        <li>Basketball</li><li>Design</li><li>Skateboarding</li><li>Music</li>
-      </ul>
-    </div>
+  <h1>Christian Nobile</h1>
+  <div class="contact">
+    Chaussee de Gand 340, box 50 Brussels, Belgium<br />
+    +32 (0)479 71 34 90<br />
+    <a href="mailto:christian.pietropaulo.nobile@gmail.com">christian.pietropaulo.nobile@gmail.com</a><br />
+    <a href="https://www.linkedin.com/in/christiannobile">LinkedIn</a> | 
+    <a href="https://christiannobile.github.io/MyResume">Website</a><br />
+    Languages: English, Dutch, French, Italian<br />
+    Interests: Basketball, Design, Skateboarding, Music
+  </div>
 
+  <div class="section">
     <h2>Profile</h2>
-    <div class="paragraph">
-      Christian is a seasoned Cloud Infrastructure Engineer, possessing a comprehensive understanding of IT infrastructure. He demonstrates exceptional analytical skills, consistently delivering high-quality work within established deadlines, and prioritizes customer satisfaction.
-    </div>
-    <div class="paragraph">
-      Christian exhibits a sharp ability to adapt and problem-solve in challenging situations, showcasing his unwavering commitment to learning and passion for IT infrastructure and Cloud technologies, setting him apart as a dedicated professional.
-    </div>
+    <p>
+      Cloud Infrastructure Engineer with deep expertise in infrastructure automation, Kubernetes, CI/CD, and cloud-native solutions. Skilled in delivering scalable systems across multi-environment deployments using Terraform, Helm, and Azure. Known for problem-solving under pressure, eagerness to learn, and commitment to operational excellence in Agile environments.
+    </p>
+  </div>
 
+  <div class="section">
     <h2>Experience</h2>
-
-    <div class="grid-section">
-      <div class="left">August 2024 – Present<br>Brussels, Belgium</div>
-      <div class="right">
-        <h3>Belgian Mobile ID – Itsme</h3>
-        <p><strong>Cloud & Systems Engineer</strong></p>
-        <div class="paragraph">Responsible for end-to-end backend API service integration</div>
-        <div class="paragraph">Created CI/CD pipelines for deploying to Kubernetes across multiple environments using Helm, GitHub Actions, and Terraform</div>
-        <div class="paragraph">Integrated the backend with the Azure API service, covering mTLS, proxy configuration, policies, ingress, network policies, and versioning</div>
-        <div class="paragraph">Created a custom Azure Key Vault certificate monitor: Migrated over 300 Azure Key Vaults across four environments to a Terraform module</div>
-        <div class="paragraph">Automated the deployment of a Kubernetes CronJob using Helm templates, Golang, Terraform, and Prometheus PushGateway Exporter</div>
-        <div class="paragraph">Configured Grafana alerts for TLS certificates approaching expiration</div>
-        <div class="paragraph">Deployed and configured Istio service mesh and Kubernetes Gateway to manage internal and external traffic routing</div>
-        <div class="paragraph">Contributed to supporting major backend releases</div>
-        <div class="paragraph">Participated in 24/7 on-call</div>
-      </div>
+    <div class="experience-entry">
+      <div class="job-title">Cloud & Systems Engineer</div>
+      <div class="location">Belgian Mobile ID – Itsme | August 2024 – Present | Brussels, Belgium</div>
+      <ul class="bullet-list">
+        <li>Backend integration of new API service into Azure APIM including mTLS, versioning, and policies.</li>
+        <li>CI/CD pipelines with GitHub Actions, Helm, Makefile, and Terraform for Kubernetes and cloud deployments.</li>
+        <li>Custom Azure Key Vault certificate monitor using Go, Terraform, PushGateway, and Helm.</li>
+        <li>Grafana dashboards and alerting enhancements for observability.</li>
+        <li>Deployed Istio for traffic routing; participated in 24/7 on-call rotation.</li>
+      </ul>
     </div>
-
-    <div class="grid-section">
-      <div class="left">September 2022 – August 2024<br>Brussels, Belgium</div>
-      <div class="right">
-        <h3>Sitecore</h3>
-        <p><strong>Cloud Infrastructure Engineer</strong></p>
-        <div class="paragraph">The platform engineering team is responsible for building complex cloud environments for Sitecore products</div>
-        <div class="paragraph">Our team uses its expertise in IaaC to create scalable infrastructure with high availability</div>
-        <div class="paragraph">By leveraging CI/CD processes, we can rapidly deploy and efficiently manage cloud infrastructure</div>
-        <div class="paragraph">Responsible for the deployment and maintenance of scalable and high-available cloud infrastructure using Terraform and Terraform cloud</div>
-        <div class="paragraph">Automated multiple administrative processes for managing user lifecycle and access to internal Elastic Cloud and Terraform Cloud platforms</div>
-        <div class="paragraph">Deployed a cronjob to Kubernetes written in bash and deployed with flux CD to enhance gitops processes</div>
-        <div class="paragraph">Contributed to 24/7 on-call</div>
-        <div class="paragraph">Scrum/Agile</div>
-      </div>
+    <div class="experience-entry">
+      <div class="job-title">Cloud Infrastructure Engineer</div>
+      <div class="location">Sitecore | September 2022 – August 2024 | Brussels, Belgium</div>
+      <ul class="bullet-list">
+        <li>Deployed secure cloud infra using Terraform and Terraform Cloud.</li>
+        <li>Automated Elastic Cloud & Terraform Cloud user lifecycle.</li>
+        <li>Kubernetes CronJob in Bash to enhance GitOps with FluxCD.</li>
+        <li>Worked in Agile/Scrum; 24/7 on-call rotation.</li>
+      </ul>
     </div>
-
-    <div class="grid-section">
-      <div class="left">June 2021 – August 2022<br>Edegem, Belgium</div>
-      <div class="right">
-        <h3>Cheops Technology</h3>
-        <p><strong>System Administrator</strong></p>
-        <p class="sub-role">(Consultant at Belgian Federal Police)</p>
-        <div class="paragraph">Responsible for designing and implementing an automation that streamlined administrative processes for all federal and local police units in Belgium</div>
-        <div class="paragraph">Scripting, Powershell, MS Graph Powershell SDK, MS Graph API, GIT</div>
-        <div class="paragraph">Implementing modern authentication methods, IdaaS</div>
-        <div class="paragraph">Azure Identity and Access Management, Azure AD, RBAC, Conditional Access</div>
-        <div class="paragraph">Enterprise application, SAML2, oAuth, OpenConnect-ID, Implementing SSO</div>
-        <div class="paragraph">Handled configuration and management of Azure AD App Registrations and associated secrets</div>
-        <div class="paragraph">Responsible for managing identities in Azure AD</div>
-        <div class="paragraph">MS Endpoint Manager (Intune)</div>
-        <div class="paragraph">3rd line level support</div>
-      </div>
+    <div class="experience-entry">
+      <div class="job-title">System Administrator</div>
+      <div class="location">Cheops Technology | June 2021 – August 2022 | Edegem, Belgium</div>
+      <ul class="bullet-list">
+        <li>Automated admin/user lifecycle for Belgian police (PowerShell, MS Graph API).</li>
+        <li>Managed Azure AD identities, apps, secrets, and auth protocols (SAML2, OAuth2, OIDC).</li>
+        <li>Implemented Conditional Access, SSO, and secure integration support.</li>
+        <li>3rd-line support for identity and access issues.</li>
+      </ul>
     </div>
-
-    <div class="grid-section">
-      <div class="left">March 2021 – June 2021<br>Zaventem, Belgium</div>
-      <div class="right">
-        <h3>Devoteam</h3>
-        <p><strong>DevOps Engineer</strong></p>
-        <p class="sub-role">(Consultant Microsoft Cloud at Elia)</p>
-        <div class="paragraph">Deployed cloud infrastructure to Azure using Terraform (Infrastructure as Code)</div>
-        <div class="paragraph">Created CI/CD pipelines in Azure DevOps to deploy cloud infrastructure across multiple environments</div>
-        <div class="paragraph">Azure AD, RBAC, IAM, IaaS, IdaaS</div>
-      </div>
+    <div class="experience-entry">
+      <div class="job-title">DevOps Engineer</div>
+      <div class="location">Devoteam | March 2021 – June 2021 | Zaventem, Belgium</div>
+      <ul class="bullet-list">
+        <li>Azure infra via Terraform and deployment pipelines via Azure DevOps.</li>
+        <li>RBAC/IAM for secure access in hybrid environments.</li>
+        <li>IaaS & IdaaS-based cloud solutions.</li>
+      </ul>
     </div>
-
-    <div class="grid-section">
-      <div class="left">May 2019 – March 2021<br>Merelbeke, Belgium</div>
-      <div class="right">
-        <h3>Avanade</h3>
-        <p><strong>Senior Associate, Infrastructure</strong> <span style="font-style: italic;">– from May 2019 to November 2020</span></p>
-        <p class="sub-role">(SysAdmin at Astara)</p>
-        <div class="paragraph">Admin of Windows Server infrastructure and VMware Server, Active Directory, Group Policies, DNS, DHCP, Print Management, File Share, AD-Sync, AD-Connect, SCCM, O365, Exchange Online, products, licensing, mailboxes, security & compliance, domains</div>
-        <div class="paragraph">Management of external DNS and purchase of SSL certificates</div>
-        <div class="paragraph">Incident and request resolution</div>
-        <div class="paragraph">Responsible for onboarding and providing all required access</div>
-        <div class="paragraph">Purchase, asset management, hardware repairs</div>
-        <div class="paragraph">Telephony systems management VOIP, DECT, Analog</div>
-        <div class="paragraph">Maintain switches and telephony cabling</div>
-        <div class="paragraph">Communication and coordination with 3rd parties</div>
-        <div class="paragraph">Documenting the various IT processes</div>
-        <div class="paragraph">Application support</div>
-      </div>
+    <div class="experience-entry">
+      <div class="job-title">Analyst, Infrastructure</div>
+      <div class="location">Avanade | November 2020 – March 2021 | Merelbeke, Belgium</div>
+      <ul class="bullet-list">
+        <li>Active Directory security and LAPS implementation.</li>
+        <li>Defender ATP deployment and patch automation via Azure Update Management.</li>
+        <li>Monitoring for IaaS and removal of obsolete infrastructure.</li>
+        <li>Maintained infra documentation (Azure, network, servers).</li>
+      </ul>
     </div>
-
-    <div class="grid-section">
-      <div class="left">November 2020 – March 2021<br>Merelbeke, Belgium</div>
-      <div class="right">
-        <h3>Avanade</h3>
-        <p><strong>Analyst, Infrastructure</strong> <span style="font-style: italic;">– from November 2020 to March 2021</span></p>
-        <p class="sub-role">(SysAdmin at Europe Assistance)</p>
-        <div class="paragraph">Security Assessment of risks in Windows Active Directory (Service/Admin accounts, Schema, Groups, Group Policies, Services, Sites, Trusts,...)</div>
-        <div class="paragraph">Responsible for PoC and planned rollout of LAPS on Windows Server Infrastructure (VM, vSphere, Azure, on-premises) and clients</div>
-        <div class="paragraph">Configuring service & resource health alerts</div>
-        <div class="paragraph">Rollout of Microsoft ATP for Endpoint on Linux and Windows Server</div>
-        <div class="paragraph">Creating Update Management Groups for Linux and Windows Servers on Azure</div>
-        <div class="paragraph">Windows Server patching</div>
-        <div class="paragraph">Decommissioning VMs, inactive servers, cleanup of deprecated resources</div>
-        <div class="paragraph">Documenting the IT Infrastructure: Servers, Azure, Appliance (Firewall/VPN)</div>
-      </div>
+    <div class="experience-entry">
+      <div class="job-title">Senior Associate, Infrastructure</div>
+      <div class="location">Avanade | May 2019 – November 2020 | Merelbeke, Belgium</div>
+      <ul class="bullet-list">
+        <li>Maintained Windows Server, AD, GPO, DNS, DHCP, AD Connect in VMware/hybrid setups.</li>
+        <li>SCCM, Office 365, Exchange Online, asset and vendor management.</li>
+        <li>User onboarding and ensuring core service uptime.</li>
+      </ul>
     </div>
+  </div>
 
+  <div class="section">
     <h2>Training</h2>
-    <div class="grid-section">
-      <div class="left">October 2018 – May 2019<br>Genk, Belgium</div>
-      <div class="right">
-        <h3>Becode.org</h3>
-        <p><strong>Web Developer</strong></p>
-        <div class="paragraph">Completed an intensive 8-month training program in web development, covering technologies such as HTML, CSS, SCSS, JavaScript, Bootstrap, Ajax, jQuery, PHP, MySQL, Apache, Docker, Git, and Linux</div>
-      </div>
-    </div>
+    <p><strong>Becode.org | Web Developer</strong> | May 2019 – March 2021 | Merelbeke, Belgium<br />
+      Completed 8-month program: HTML, CSS, JS, Bootstrap, PHP, MySQL, Git, Linux, Docker, Apache.</p>
+  </div>
 
+  <div class="section">
     <h2>Certifications</h2>
-<div class="grid-section">
-  <div class="left">Azure Solutions Architect Expert</div>
-  <div class="right">Passed exam: AZ-305: Designing Microsoft Azure Infrastructure Solutions</div>
-</div>
-<div class="grid-section">
-  <div class="left">DevOps Engineer Expert</div>
-  <div class="right">Passed exam: AZ-400: Designing and Implementing Microsoft DevOps Solutions</div>
-</div>
-<div class="grid-section">
-  <div class="left">Azure Administrator Associate</div>
-  <div class="right">Passed exam: AZ-103: Microsoft Azure Administrator Associate</div>
-</div>
-<div class="grid-section">
-  <div class="left">CISSP</div>
-  <div class="right">Completed course: Certified Information Systems Security Professional</div>
-</div>
-<div class="grid-section">
-  <div class="left">CCNA</div>
-  <div class="right">Completed course: Introduction to Networks</div>
-</div>
-
-<h2>Skills</h2>
-    <ul class="list-inline">
-      <li>Automation</li><li>Scripting</li><li>Linux</li><li>Terraform</li><li>Bash</li><li>Golang</li><li>Python</li>
-      <li>Helm</li><li>CI/CD</li><li>GitHub Actions</li><li>Makefile</li><li>Kustomize</li><li>FluxCD</li>
-      <li>Docker</li><li>Kubernetes</li><li>Prometheus</li><li>Grafana</li><li>Istio</li><li>Azure</li>
-      <li>SQL</li><li>Ansible</li><li>Redis</li><li>Kafka</li><li>ELK stack</li><li>Scrum/agile</li>
+    <ul class="bullet-list">
+      <li>Microsoft Certified: Azure Solutions Architect Expert AZ-305</li>
+      <li>Microsoft Certified: DevOps Engineer Expert AZ-400</li>
+      <li>Microsoft Certified: Azure Administrator Associate AZ-103</li>
+      <li>CISSP (course completed)</li>
+      <li>CCNA (course completed)</li>
     </ul>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div>
+      <span class="keywords">Automation</span><span class="keywords">Scripting</span><span class="keywords">Linux</span><span class="keywords">Terraform</span>
+      <span class="keywords">Bash</span><span class="keywords">Golang</span><span class="keywords">Python</span><span class="keywords">Helm</span>
+      <span class="keywords">CI/CD</span><span class="keywords">GitHub Actions</span><span class="keywords">Makefile</span><span class="keywords">Kustomize</span>
+      <span class="keywords">FluxCD</span><span class="keywords">Docker</span><span class="keywords">Kubernetes</span><span class="keywords">Prometheus</span>
+      <span class="keywords">Grafana</span><span class="keywords">Istio</span><span class="keywords">Azure</span><span class="keywords">SQL</span>
+      <span class="keywords">Ansible</span><span class="keywords">Redis</span><span class="keywords">Kafka</span><span class="keywords">ELK stack</span>
+      <span class="keywords">Scrum</span><span class="keywords">Agile</span>
+    </div>
   </div>
 </body>
 </html>
